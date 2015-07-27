@@ -1,8 +1,6 @@
 # virtualbox name: PLUTO
 # os type: Ubuntu
-#
-#
-#
+# ISO file path: /home/username/ubuntu-15.04-server-i386.iso
 
 # Public Network vboxnet0 (172.16.0.0/16)
 VBoxManage hostonlyif create
@@ -17,13 +15,13 @@ VBoxManage hostonlyif ipconfig vboxnet1 --ip 10.0.0.254 --netmask 255.0.0.0
 
 
 # Create VirtualBox Machine
-VboxManage createvm --name PLUTO --ostype Ubuntu --register
+VBoxManage createvm --name PLUTO --ostype Ubuntu --register
 VBoxManage modifyvm PLUTO --memory 2048 --nic1 nat --nic2 hostonly --hostonlyadapter2 vboxnet0 --nic3 hostonly --hostonlyadapter3 vboxnet1
 
 
 # Create CD-Drive and Attach ISO
 VBoxManage storagectl PLUTO --name "IDE Controller" --add ide --controller PIIX4 --hostiocache on --bootable on
-VBoxManage storageattach PLUTO --storagectl "IDE Controller" --type dvddrive --port 0 --device 0 --medium Downloads/ubuntu-12.04-server-amd64.iso
+VBoxManage storageattach PLUTO --storagectl "IDE Controller" --type dvddrive --port 0 --device 0 --medium /home/username/ubuntu-15.04-server-i386.iso
 
 
 
