@@ -18,7 +18,7 @@
 
    At this point, your desktop should be switched from GUI booting to console booting. Verify this by rebooting.
 
-   ![](06-VM-boot-text-mode-result.jpg)
+   ![](images/06-VM-boot-text-mode-result.jpg)
 
 5. The following command was needed in Debian Jessie (8) as it uses systemd:
 
