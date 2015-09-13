@@ -22,7 +22,7 @@
 
     Click the “DHCP server” tab and uncheck the ‘Enable Server’ checkbox – we don’t need DHCP because we’ll be using a static IP address.
 
-   ![](images/02-Network-HostOnly.png)   
+   ![](images/02-Network-HostOnly.png) 
 
 1. Two virtual network adapters in the VM’s network tab in Virtualbox:
 
@@ -74,7 +74,9 @@
 
 4. Reset the VM and you should now be up and running
 
-   ```
+	```
+   $ ifdown eth0
+   $ ifdown eth1
    $ ifup eth0
    $ ifup eth1
    ```
